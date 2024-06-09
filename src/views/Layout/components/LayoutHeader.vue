@@ -5,7 +5,6 @@ import { getCategoryAPI } from "@/apis/layout";
 const categoryList = ref([]);
 const getCategory = async () => {
     let res = await getCategoryAPI();
-    console.log(res.result);
     categoryList.value = res.result;
 }
 onMounted(() => {
