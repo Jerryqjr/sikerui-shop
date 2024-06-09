@@ -12,6 +12,7 @@ export default defineConfig({
     vue(),
     // element-plus配置插件
     AutoImport({
+      imports: ["vue", "vue-router", "pinia"],
       resolvers: [ElementPlusResolver()],
     }),
     Components({
