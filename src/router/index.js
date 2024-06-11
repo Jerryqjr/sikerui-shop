@@ -15,7 +15,7 @@ const router = createRouter({
           component: Home
         },
         {
-          path: 'category',
+          path: 'category/:id',
           component: Category
         }
       ]
@@ -28,7 +28,13 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
 
     }
-  ]
+  ],
+  scrollBehavior() {
+    return {
+      top: 0
+    }
+  }
+
 })
 
 export default router

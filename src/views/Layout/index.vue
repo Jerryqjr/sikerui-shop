@@ -9,7 +9,9 @@ import LayoutFixed from "@/views/Layout/components/LayoutFixed.vue"
     <LayoutFixed></LayoutFixed>
     <LayoutNav></LayoutNav>
     <LayoutHeader></LayoutHeader>
-    <RouterView />
+    <!--方式一:给router-view添加key ,破坏二级路由复用机制，强制销毁重建(刷新)
+    <RouterView :key="$route.fullPath" /> -->
+    <router-view></router-view>
     <LayoutFooter></LayoutFooter>
 </template>
 

@@ -39,7 +39,7 @@ onMounted(() => getGoods())
     .sub {
         margin-bottom: 2px;
 
-        a {
+        +a {
             padding: 2px 12px;
             font-size: 16px;
             border-radius: 4px;
