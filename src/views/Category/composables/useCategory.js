@@ -7,10 +7,10 @@ export function useCategory() {
     const getCategory = async (id) => {
         // 如何在setup中获取路由参数 useRoute() -> route 等价于this.$route
         //console.log(route.params.id);
-        const res = await getTopCategoryAPI(route.params.id)
+        const res = await getTopCategoryAPI(id)
         categoryData.value = res.result
     }
-    onMounted(() => getCategory())
+    onMounted(() => getCategory(route.params.id))
     onBeforeRouteUpdate((to) => {
         getCategory(to.params.id)
     })
