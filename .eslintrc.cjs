@@ -14,9 +14,5 @@ module.exports = {
 
   rules: {
     'vue/multi-word-component-names': 'off',
-  },
-  extends: [
-    ...
-    './.eslintrc-auto-import.json'
-  ]
+  }
 }

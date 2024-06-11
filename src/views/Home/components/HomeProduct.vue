@@ -1,4 +1,5 @@
 <script setup>
+import { ref, onMounted } from 'vue';
 import HomePanel from './HomePanel.vue'
 import { getGoodsAPI } from '@/apis/home'
 import GoodsItem from './GoodsItem.vue';

@@ -1,4 +1,5 @@
 <script setup>
+import { ref, onMounted } from 'vue';
 import { getCategoryFilterAPI, getSubCategoryAPI } from '@/apis/category'
 import { useRoute } from "vue-router";
 import GoodsItem from '../Home/components/GoodsItem.vue';
