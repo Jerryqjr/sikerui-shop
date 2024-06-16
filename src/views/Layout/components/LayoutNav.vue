@@ -1,11 +1,14 @@
 <script setup>
 import { useUserStore } from '@/stores/userStore';
 import router from '@/router';
+import { useCartStore } from '@/stores/cartStore';
 const userStore = useUserStore()
+const cartStore = useCartStore()
 const confirm = () => {
     // 退出登录业务逻辑实现
     // 1.清除用户信息 触发action
     userStore.clearUserInfo()
+    cartStore.clearCart()
     // 2.跳转到登录页
     router.push('/login')
 }

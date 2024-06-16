@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { getCategoryAPI } from "@/apis/layout";
+import HeaderCart from '@/views/Layout/components/HeaderCart.vue'
 
 const categoryList = ref([]);
 const getCategory = async () => {
@@ -31,7 +32,7 @@ onMounted(() => {
                 <input type="text" placeholder="搜一搜">
             </div>
             <!-- 头部购物车 -->
-
+            <HeaderCart></HeaderCart>
         </div>
     </header>
 </template>
